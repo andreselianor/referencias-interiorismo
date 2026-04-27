@@ -4,15 +4,26 @@
     font-family: Noto Sans Display;
 }
 
+:root {
+    --color1: #4446e255;
+    --color2: #A8232355;
+}
+
 header, main {
     margin: 20px;
 }
 
+main {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
 #card {
-    width: 200px;
+    width: 250px;
     height: 250px;
     border-radius: 5px;
-    background-color: lightblue;
+    background-color: var(--color1);
     box-shadow: 5px 5px 2px lightgray;
     padding: 20px;
     border: solid 1px black;
@@ -20,8 +31,8 @@ header, main {
 }
 
 .image {
-    height: 130px;
-    width: 200px;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -31,4 +42,8 @@ header, main {
 
 h4 {
     font-size: 17pt;
+}
+
+.image-container {
+    height: 200px;
 }
