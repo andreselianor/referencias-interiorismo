@@ -24,7 +24,11 @@ main {
     width: 250px;
     height: 250px;
     border-radius: 5px;
-    background-color: var(--color1);
+    background: linear-gradient(325deg,
+            #6269a888 0%,
+            #2cbcff9a 20%,
+            #8bcae79a 80%,
+            #eaff8f93 100%);
     box-shadow: 9px 9px 2px lightgray;
     padding: 20px;
     border: solid 1px black;
