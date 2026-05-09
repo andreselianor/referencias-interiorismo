@@ -71,3 +71,7 @@ h4 {
         transform: translateY(0px);
     }
 }
+
+h4 {
+    font-family: 'Lora';
+}
