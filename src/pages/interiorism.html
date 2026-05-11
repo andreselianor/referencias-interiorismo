@@ -9,12 +9,13 @@
     <link rel='icon' href='../icons/favicon.svg'>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h4>INTERIORISMO</h4>
+        <h4><a href="../../index.html">■&emsp;</a>INTERIORISMO</h4>
     </header>
     <main>
         <div id="card">
@@ -42,7 +43,8 @@
         </div>
 
         <div id="card">
-            <a class="link" href="https://miamism.com/rip-wahl-snyder-landmark-miami-shores/?utm_source=chatgpt.com">Wahl Snyder</a>
+            <a class="link"
+                href="https://miamism.com/rip-wahl-snyder-landmark-miami-shores/?utm_source=chatgpt.com">Wahl Snyder</a>
             <p class="text">Miami, USA</p>
             <div class="image-container">
                 <img class="image" src="../images/wahlsnyder.jpg">
@@ -58,7 +60,9 @@
         </div>
 
         <div id="card">
-            <a class="link" href="https://www.designboom.com/architecture/circular-365-house-andrea-hikone-japan-10-16-2022/">Andrea Hikone</a>
+            <a class="link"
+                href="https://www.designboom.com/architecture/circular-365-house-andrea-hikone-japan-10-16-2022/">Andrea
+                Hikone</a>
             <p class="text">Yokosuka City, Japana</p>
             <div class="image-container">
                 <img class="image" src="../images/andreaHikone.jpg">
@@ -66,10 +70,19 @@
         </div>
 
         <div id="card">
-            <a class="link" href="https://www.architecturedecollection.fr/produit/villa-architecte-seventies-space-age-perche-gaston-pierre-dreux/">Pierre & Gaston Dreux</a>
+            <a class="link"
+                href="https://www.architecturedecollection.fr/produit/villa-architecte-seventies-space-age-perche-gaston-pierre-dreux/">Pierre
+                & Gaston Dreux</a>
             <p class="text">Paris, Francia</p>
             <div class="image-container">
                 <img class="image" src="../images/pierreGastonDreux.webp">
+            </div>
+        </div>
+        <div>
+            <a class="link" href="https://labasestudio.com/es/proyectos-proximamente/">La base studio</a>
+            <p class="text">Buenos Aires, Argentina</p>
+            <div class="image-container">
+                <img class="image" src="../images/labasestudio.png">
             </div>
         </div>
 
@@ -80,7 +93,33 @@
                 <img class="image" src="../images/goetheInstitute.jpg">
             </div>
         </div>
+
     </main>
+    <style>
+        .parametric {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            color: gray;
+        }
+    </style>
+
+    <script>
+        let parametric;
+        let node = document.createElement("p");
+        node.classList.add("parametric");
+        let root = document.getElementsByTagName("body")[0];
+        root.append(node);
+        let x;
+        let y;
+        document.addEventListener('mousemove', (e) => {
+            x = e.clientX + 20;
+            y = e.clientY - 20;
+            node.style.top = `${y}px`;
+            node.style.left = `${x}px`;
+            node.textContent = `${x},${y}`;
+        })
+    </script>
 
 </body>
 
