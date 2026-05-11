@@ -78,7 +78,8 @@
                 <img class="image" src="../images/pierreGastonDreux.webp">
             </div>
         </div>
-        <div>
+
+        <div id="card">
             <a class="link" href="https://labasestudio.com/es/proyectos-proximamente/">La base studio</a>
             <p class="text">Buenos Aires, Argentina</p>
             <div class="image-container">
@@ -100,7 +101,6 @@
             width: 100px;
             height: 100px;
             position: absolute;
-            color: gray;
         }
     </style>
 
@@ -112,13 +112,32 @@
         root.append(node);
         let x;
         let y;
-        document.addEventListener('mousemove', (e) => {
+        // document.addEventListener('mousemove', (e) => {
+        //     x = e.clientX + 20;
+        //     y = e.clientY - 20;
+        //     node.style.color = "grey";
+        //     node.style.top = `${y}px`;
+        //     node.style.left = `${x}px`;
+        //     node.textContent = `${x},${y}`;
+        // });
+        let cards = document.getElementById("card");
+        cards.addEventListener('mouseover', (e) => {
             x = e.clientX + 20;
             y = e.clientY - 20;
+            console.log("red")
+            node.style.color = "red";
             node.style.top = `${y}px`;
             node.style.left = `${x}px`;
             node.textContent = `${x},${y}`;
-        })
+        });
+        cards.addEventListener('mouseout', (e) => {
+            x = e.clientX + 20;
+            y = e.clientY - 20;
+            node.style.color = "grey";
+            node.style.top = `${y}px`;
+            node.style.left = `${x}px`;
+            node.textContent = `${x},${y}`;
+        });
     </script>
 
 </body>
