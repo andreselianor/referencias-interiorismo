@@ -97,3 +97,9 @@ h4 {
 h4 {
     font-family: 'Lora';
 }
+
+.parametric {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
