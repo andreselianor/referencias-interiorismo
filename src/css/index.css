@@ -1,49 +1,10 @@
-.index-txt {
-    font-family: 'Lora';
-}
-
-h4 {
-    margin: 0px;
-    padding: 0px;
-}
-
-header {
-    width: 500px;
-    margin: 25px 15px;
-    border-bottom: solid 1px black;
-}
-
-.index-a {
-    padding: 10px;
-    margin: 15px;
-    border: solid 1px black;
-    font-family: sans-serif;
-}
-
 * {
     margin: 0px;
     padding: 0px;
     font-family: Noto Sans Display;
 }
 
-:root {
-    --color1: #6f71bd55;
-    --color2: #A8232355;
-}
-
-header,
-main {
-    margin: 20px;
-}
-
-main {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-#card {
+.card {
     width: 250px;
     height: 250px;
     border-radius: 5px;
@@ -58,26 +19,44 @@ main {
     box-sizing: content-box;
 }
 
+.card * {
+    margin: 5px 0;
+}
+
+.card:hover {
+    animation: animationhover 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
 .image {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-#card * {
-    margin: 5px 0;
-}
-
-h4 {
-    font-size: 17pt;
-}
-
 .image-container {
     height: 200px;
 }
 
-#card:hover {
-    animation: animationhover 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.index-a {
+    padding: 10px;
+    margin: 15px;
+    border: solid 1px black;
+    font-family: sans-serif;
+}
+
+.index-txt {
+    font-family: 'Lora';
+}
+
+.parametric {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+:root {
+    --color1: #6f71bd55;
+    --color2: #A8232355;
 }
 
 @keyframes animationhover {
@@ -95,11 +74,26 @@ h4 {
 }
 
 h4 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 17pt;
     font-family: 'Lora';
 }
 
-.parametric {
-    width: 100px;
-    height: 100px;
-    position: absolute;
+header {
+    width: 500px;
+    margin: 25px 15px;
+    border-bottom: solid 1px black;
+}
+
+header,
+main {
+    margin: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
 }
