@@ -1,8 +1,8 @@
-* {
+.index-txt {
     font-family: 'Lora';
 }
 
-h4{
+h4 {
     margin: 0px;
     padding: 0px;
 }
@@ -13,9 +13,87 @@ header {
     border-bottom: solid 1px black;
 }
 
-a {
+.index-a {
     padding: 10px;
     margin: 15px;
     border: solid 1px black;
     font-family: sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Noto Sans Display;
+}
+
+:root {
+    --color1: #6f71bd55;
+    --color2: #A8232355;
+}
+
+header,
+main {
+    margin: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#card {
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+    background: linear-gradient(325deg,
+            #6269a888 0%,
+            #2cbcff9a 20%,
+            #8bcae79a 80%,
+            #eaff8f93 100%);
+    box-shadow: 9px 9px 2px lightgray;
+    padding: 20px;
+    border: solid 1px black;
+    box-sizing: content-box;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#card * {
+    margin: 5px 0;
+}
+
+h4 {
+    font-size: 17pt;
+}
+
+.image-container {
+    height: 200px;
+}
+
+#card:hover {
+    animation: animationhover 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes animationhover {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+h4 {
+    font-family: 'Lora';
 }
