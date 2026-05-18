@@ -18,7 +18,7 @@
         <h4><a href="../../index.html">■&emsp;</a>INTERIORISMO</h4>
     </header>
     <main>
-        <div id="card">
+        <div class="card">
             <a class="link" href="https://www.angelosangelopoulos.com/">Angelos Angelopoulos Associates</a>
             <p class="text">Atenas, Grecia</p>
             <div class="image-container">
@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <div id="card">
+        <div class="card">
             <a class="link" href="https://es.pinterest.com/genevievemargin/">Genevieve Marginet</a>
             <p class="text">Ghent, Belgium</p>
             <div class="image-container">
@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <div id="card">
+        <div class="card">
             <a class="link" href="https://www.instagram.com/javiersenosiaina/">Javier Senosiain</a>
             <p class="text">Ciudad de Mexico</p>
             <div class="image-container">
@@ -42,7 +42,7 @@
             </div>
         </div>
 
-        <div id="card">
+        <div class="card">
             <a class="link"
                 href="https://miamism.com/rip-wahl-snyder-landmark-miami-shores/?utm_source=chatgpt.com">Wahl Snyder</a>
             <p class="text">Miami, USA</p>
@@ -51,7 +51,7 @@
             </div>
         </div>
 
-        <div id="card">
+        <div class="card">
             <a class="link" href="https://www.instagram.com/frankvisserijm/">Frank Visser</a>
             <p class="text">Amsterdam, Holanda</p>
             <div class="image-container">
@@ -59,7 +59,7 @@
             </div>
         </div>
 
-        <div id="card">
+        <div class="card">
             <a class="link"
                 href="https://www.designboom.com/architecture/circular-365-house-andrea-hikone-japan-10-16-2022/">Andrea
                 Hikone</a>
@@ -69,7 +69,7 @@
             </div>
         </div>
 
-        <div id="card">
+        <div class="card">
             <a class="link"
                 href="https://www.architecturedecollection.fr/produit/villa-architecte-seventies-space-age-perche-gaston-pierre-dreux/">Pierre
                 & Gaston Dreux</a>
@@ -79,7 +79,7 @@
             </div>
         </div>
 
-        <div id="card">
+        <div class="card">
             <a class="link" href="https://labasestudio.com/es/proyectos-proximamente/">La base studio</a>
             <p class="text">Buenos Aires, Argentina</p>
             <div class="image-container">
@@ -87,11 +87,27 @@
             </div>
         </div>
 
-        <div id="card">
+        <div class="card">
             <a class="link" href="https://www.metalocus.es/es/autor/far-frohn-y-rojas">Marc Frohn & Mario Rojas</a>
             <p class="text">Berlin, Chile</p>
             <div class="image-container">
                 <img class="image" src="../images/goetheInstitute.jpg">
+            </div>
+        </div>
+
+        <div class="card">
+            <a class="link" href="https://warymeyers.com/pages/made-in-maine">Wary Meyeres</a>
+            <p class="text">Maine, USA</p>
+            <div class="image-container">
+                <img class="image" src="../images/waryMeyers.jpg">
+            </div>
+        </div>
+
+        <div class="card">
+            <a class="link" href="https://www.matalicrasset.com/en">Mattali Crasset</a>
+            <p class="text">Chalons, Francia</p>
+            <div class="image-container">
+                <img class="image" src="../images/mattali_crasset.jpg">
             </div>
         </div>
 
@@ -102,18 +118,8 @@
                 <img class="image" src="../images/carloszapata.jpg">
             </div>
         </div>
-
         
-
     </main>
-    <style>
-        .parametric {
-            width: 100px;
-            height: 100px;
-            position: absolute;
-        }
-    </style>
-
     <script>
         let parametric;
         let node = document.createElement("p");
@@ -122,31 +128,23 @@
         root.append(node);
         let x;
         let y;
-        // document.addEventListener('mousemove', (e) => {
-        //     x = e.clientX + 20;
-        //     y = e.clientY - 20;
-        //     node.style.color = "grey";
-        //     node.style.top = `${y}px`;
-        //     node.style.left = `${x}px`;
-        //     node.textContent = `${x},${y}`;
-        // });
-        let cards = document.getElementById("card");
-        cards.addEventListener('mouseover', (e) => {
+        document.addEventListener('mousemove', (e) => {
             x = e.clientX + 20;
             y = e.clientY - 20;
-            console.log("red")
-            node.style.color = "red";
             node.style.top = `${y}px`;
             node.style.left = `${x}px`;
             node.textContent = `${x},${y}`;
         });
-        cards.addEventListener('mouseout', (e) => {
-            x = e.clientX + 20;
-            y = e.clientY - 20;
-            node.style.color = "grey";
-            node.style.top = `${y}px`;
-            node.style.left = `${x}px`;
-            node.textContent = `${x},${y}`;
+        let cards = document.getElementsByClassName("card");
+        Array.from(cards).forEach(element => {
+            element.addEventListener('mouseover', (e) => {
+                node.style.color = "red";
+            })
+        });
+        Array.from(cards).forEach(element => {
+            element.addEventListener('mouseout', (e) => {
+                node.style.color = "grey";
+            })
         });
     </script>
 
