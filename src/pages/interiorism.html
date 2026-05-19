@@ -11,6 +11,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
+    <script src="../js/interiorism.js" defer></script>
 </head>
 
 <body>
@@ -118,34 +119,15 @@
                 <img class="image" src="../images/carloszapata.jpg">
             </div>
         </div>
+
+        <div class="card">
+            <a class="link" href="http://www.tele-design.jp/">Tele-design</a>
+            <p class="text">Tokyo, Japan</p>
+            <div class="image-container">
+                <img class="image" src="../images/tele-design.jpg">
+            </div>
+        </div>
     </main>
-    <script>
-        let parametric;
-        let node = document.createElement("p");
-        node.classList.add("parametric");
-        let root = document.getElementsByTagName("body")[0];
-        root.append(node);
-        let x;
-        let y;
-        document.addEventListener('mousemove', (e) => {
-            x = e.clientX + 20;
-            y = e.clientY - 20;
-            node.style.top = `${y}px`;
-            node.style.left = `${x}px`;
-            node.textContent = `${x},${y}`;
-        });
-        let cards = document.getElementsByClassName("card");
-        Array.from(cards).forEach(element => {
-            element.addEventListener('mouseover', (e) => {
-                node.style.color = "red";
-            })
-        });
-        Array.from(cards).forEach(element => {
-            element.addEventListener('mouseout', (e) => {
-                node.style.color = "grey";
-            })
-        });
-    </script>
 </body>
 
 </html>
